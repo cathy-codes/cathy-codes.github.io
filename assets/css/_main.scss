@@ -1,0 +1,28 @@
+/* ------- Colours -------- */
+$color-grey-1: #333;
+$color-white: #fff;
+
+@mixin dark-mode {
+    background-color: $color-grey-1;
+    color: $color-white;
+}
+
+.dark-mode {
+    @include dark-mode;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    background-color: $color-white;
+    color: $color-grey-1;
+
+    @media (prefers-color-scheme: dark) {
+        @include dark-mode;
+    }
+}
+
+.header-nav {
+    padding: 1rem;
+}
+
